@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <style>
+          body{
+            margin:0;
+          }
+          .one{
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(170, 255, 252);
+            width: 180px;
+            height: 200px;
+            justify-content: space-around;
+            color: blue;
+          }
+
+          .main{
+            height:202px;
+            width:190px;
+            border: 1px solid black;
+            margin: 10px;
+            padding-left: 8px;
+            padding-top: 9px;
+          }
+
+          .one div{
+            flex-basis: 90px;
+            padding: 9px;
+            
+          }
+          
+          .one div:hover{
+            background-color: orange;
+            color: white;
+          }
+
+          b{
+            position: relative;
+            left: 25px;
+          } 
+    </style>
+
+    <style>
+        .main2{
+            height: 45px;
+            width: 272px;
+            border: 1px solid black;
+            margin: 10px;
+        }
+
+        .two{
+            background-color: rgb(198, 194, 194);
+            display: flex;
+            width: 266px;
+            height: 40px;
+            justify-content: space-around;
+            margin-left: 6px;
+            margin-top: 2px;
+        }
+
+        .two div{
+            height: 30px;
+            width: 80px;
+            text-align: center;
+            padding-top: 10px;
+            color: blue;
+            border-right: solid 1px blue;
+        }
+        
+        #noborder{
+          border: none;
+        }
+        
+
+        .two div:hover{
+            background-color: grey;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <b>Vertical Navigation Bar</b>
+    <div class="main">
+        <div class="one">
+            <div>Home</div>
+            <div>Java</div>
+            <div>CSS</div>
+            <div>HTML</div>
+            <div>Bootstrap</div>
+        </div>
+    </div>
+
+    <br>
+    <b id="hor">Horizontal Navigation Bar</b>
+    <div class="main2">
+        <div class="two">
+            <div>Home</div>
+            <div>Java</div>
+            <div>HTML</div>
+            <div>CSS</div>
+            <div id="noborder"></div>
+            
+        </div>
+    </div>
+</body>
+</html>

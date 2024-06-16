@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK 7</title>
+
+    <style>
+        body{
+            background-color: rgb(181, 33, 58);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .main{
+            background-color: rgb(107, 4, 21);
+            width: 600px;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            margin: 4% 30%;
+        }
+        h1{
+            margin: 2% 46%;
+            color: white;
+        }
+
+        table{
+            margin-left: 15%;
+            margin-top: 11px;
+            color: white;
+        }
+
+        td{
+            padding: 10px;
+        }
+
+        button{
+            padding: 11px;
+            width: 20vw;
+            margin-left: 20%;
+            border-radius: 5px;
+            border: none;
+            background-color: white;
+            color: black;
+            font-weight: bold;
+            font-size: 15px;
+        }
+       
+
+    </style>
+</head>
+<body>
+    <h1> TASK 7</h1>
+    <div class="main">
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" placeholder="your name"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" placeholder="your email"></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password"></td>
+            </tr>
+            <tr>
+                <td>Phone Number:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>Male:<input type="radio"> &nbsp; Female: <input type="radio"> &nbsp; Other: <input type="radio"></td>
+            </tr>
+            <tr>
+                <td>language:</td>
+                <td><select> <option>Select language</option>
+                             <option> Tamil </option>
+                             <option> Telugu</option>
+                             <option> Malayalam </option>
+                             <option> Kannada </option>
+                             <option> Hindi </option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Zip Code:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>About:</td>
+                <td><textarea rows="2" cols="20"></textarea></td>
+            </tr>
+        </table>
+        <button> Register </button>
+    </div>
+    
+    
+</body>
+</html>
