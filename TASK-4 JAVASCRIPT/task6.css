@@ -1,0 +1,14 @@
+@media only screen and (max-width: 768px){
+    .inside{
+        width: 350px;
+        background-color: rgb(241, 240, 240);
+    }
+}
+
+@media only screen and (min-width: 769px){
+    .inside{
+        width: 450px;
+        background-color: rgb(241, 240, 240);
+    }
+}
+

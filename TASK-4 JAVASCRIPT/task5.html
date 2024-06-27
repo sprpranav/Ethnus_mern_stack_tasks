@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK 5</title>
+    <style>
+        table,td{
+            padding: 10px;
+        }
+
+        input{
+            padding:5px;
+        }
+
+      
+       
+    </style>
+</head>
+<body>
+    <h1> Task 5</h1>
+    <table>
+        <tr id="nameerror">
+            <td>Name:</td>
+            <td><input type="text" id="name"></td>
+
+        </tr>
+        <tr id="emailerror">
+            <td>Email:</td>
+            <td><input type="email" id="email"></td>
+            
+        </tr>
+        <tr id="websiteerror">
+            <td>Website:</td>
+            <td><input type="text" id="website"></td>
+            
+        </tr>
+        <tr id="messageerror">
+            <td>Message:</td>
+            <td><textarea id="message"></textarea></td>
+            
+        </tr>
+        <tr>
+            <td><button>Submit</button></td>
+        </tr>
+        
+    </table>
+
+    <script>
+        var btn=document.querySelector('button');
+        var nameappend=document.createElement('td');
+        var emailappend=document.createElement('td');
+        var websiteappend=document.createElement('td');
+        var messageappend=document.createElement('td');
+
+        nameappend.style.color="red";
+        emailappend.style.color="red";
+        websiteappend.style.color="red";
+        messageappend.style.color="red";
+
+        btn.addEventListener("click",()=>{
+            var name=document.getElementById("name").value;
+            var email=document.getElementById("email").value;
+            var website=document.getElementById("website").value;
+            var message=document.getElementById("message").value;
+
+            if(name===""){
+                nameappend.textContent="The name field is required";
+                document.querySelector('#name').style.border="1px solid red";
+            }
+            if(email===""){
+                emailappend.textContent="The email field is required";
+                document.querySelector('#email').style.border="1px solid red";
+            }
+            if(website===""){
+                websiteappend.textContent="The website field is required";
+                document.querySelector('#website').style.border="1px solid red";
+            }
+            if(message===""){
+                messageappend.textContent="The message field is required";
+                document.querySelector('#message').style.border="1px solid red";
+            }
+
+
+            document.getElementById("nameerror").appendChild(nameappend);
+            document.getElementById("emailerror").appendChild(emailappend);
+            document.getElementById("websiteerror").appendChild(websiteappend);
+            document.getElementById("messageerror").appendChild(messageappend);
+
+        })
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK 1</title>
+</head>
+<body>
+    <h1>Reversing Number</h1>
+    <p>Enter a number</p>
+    <input type="text" name="num"  id="num">
+    <button> Reverse Number</button>
+    <script>
+        var btn=document.querySelector('button');
+        btn.addEventListener("click",reversed);
+        var reversednumber=document.createElement('p');
+       
+
+        function reversed(){
+        var number=document.getElementById('num').value;
+        numberreversed=number.split("").reverse().join("");
+        console.log(numberreversed);
+        reversednumber.textContent=numberreversed;
+        document.body.appendChild(reversednumber);
+        
+        }
+       
+
+
+    </script>
+</body>
+</html>
