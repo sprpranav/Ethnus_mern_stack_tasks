@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 6</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+  <div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card w-50">
+      <div class="card-body">
+        <form id="myForm" novalidate>
+          <div class="form-group" id="nameappend">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name" required/>
+          </div>
+
+          <div class="form-group" id="nameappend">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required/>
+          </div>
+
+          <div class="form-group" id="nameappend">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter your password" required/>
+          </div>
+          <div class="form-group" id="nameappend">
+            <label for="hobbies">Hobbies</label>
+            <select class="form-control" id="hobbies">
+              <option value="" disabled selected>Select your hobbies</option>
+              <option>Reading</option>
+              <option>Traveling</option>
+              <option>Cooking</option>
+              <option>Sports</option>
+            </select>
+          </div>
+          <button type="submit" id="bt" class="btn btn-danger btn-block">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    const btn = document.getElementById("bt");
+    //const form = document.getElementById("myForm");
+    var namep= document.createElement('p');
+    namep.id="namediv"
+
+    document.getElementById("nameappend").appendChild(namep);
+    namep.style.color="red";
+    namep.style["font-size"]="11px";
+    
+   
+    
+
+
+    btn.addEventListener("click", function(event) {
+      const nameInput = document.getElementById("name");
+      const emailInput= document.getElementById("email");
+      const passwordInput=document.getElementById("password");
+      const hobbyInput=document.getElementById("hobbies");
+
+
+      if (nameInput.value === "") {
+        nameInput.classList.add("is-invalid"); // Add invalid class if name is empty
+        event.preventDefault(); // Prevent form submission
+        document.getElementById("namediv").innerHTML="Name is required";
+
+      } else {
+        nameInput.classList.add("is-valid"); // Remove invalid class if name is provided
+      }
+
+      if (emailInput.value === "") {
+        emailInput.classList.add("is-invalid"); // Add invalid class if name is empty
+        event.preventDefault(); // Prevent form submission
+      } else {
+        emailInput.classList.add("is-valid"); // Remove invalid class if name is provided
+      }
+
+      if (passwordInput.value === "") {
+        passwordInput.classList.add("is-invalid"); // Add invalid class if name is empty
+        event.preventDefault(); // Prevent form submission
+      } else {
+        passwordInput.classList.add("is-valid"); // Remove invalid class if name is provided
+      }
+
+      if (hobbyInput.value === "") {
+        hobbyInput.classList.add("is-invalid"); // Add invalid class if name is empty
+        event.preventDefault(); // Prevent form submission
+      } else {
+        hobbyInput.classList.add("is-valid"); // Remove invalid class if name is provided
+      }
+
+
+
+      
+    });
+  </script>
+
+</body>
+</html>
